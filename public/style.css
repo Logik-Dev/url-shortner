@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+#page{
+    background-color: #333;
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 1.5rem;
+}
+h1,h2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+#title{
+    font-size: 2.5rem;
+}
+#content{
+    margin: 2rem auto;
+    background-color: #fff;
+    color: #000;
+    max-width: 800px;
+    padding: 2rem 2rem;
+    line-height: 1.5;
+    border-radius: 5px;
+    box-shadow: 0 0 5px white;
+}
+ol{
+    font-size: 1rem;
+    margin-top: .8rem;
+}
+li{
+    margin-bottom: .8rem;
+}
+.code{
+    display: inline-block;
+    background-color: #fafafa;
+    padding: 0 8px;
+    border-radius: 2px;
+}
+.exemple{
+    text-align: center;
+    color: rgb(8, 79, 231);
+    font-size: 1rem;
+    font-family: monospace;
+}
+form {
+    margin: 2rem auto;
+    border: 1px #bbb solid;
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+}
+input[type = text]{
+    display: inline-block;
+    padding: 5px 10px;
+    width: 235px;
+}
+input[type = submit] {
+    padding: 5px 10px;
+}
+a {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    color: darkred;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+.output{
+    padding-top: .5rem;
+}

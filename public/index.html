@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>URL Shortner</title>
+</head>
+<body>
+    <div id="page">
+        <h1 id="title">URL Shortner</h1>
+        <div id="content">
+            <h2 class="subtitle">Cahier des charges:</h2>
+            <ol>
+                <li>L'utilisateur peut soumettre une URL à l'adresse <span class="code">[url_du_projet]/api/shorturl/new</span> et obtient une réponse au format JSON:
+                <div class="exemple">{"original url": "https://www.google.com", "short_url": "mX_EcitPv"} </div>
+                </li>
+                <li>Si l'URL fournie est ne respecte pas le format <span class="code">http(s)://www.exemple.com(/routes)</span> la réponse au format JSON sera de type: <div class="exemple">{"error": "invalid URL"}</div>Pour être sur de la validité de l'adresse on utilisera le module node urlExists(url, cb).</li>
+                <li>Lorsque l'utilisateur se rend sur la page du lien, il est redirigé vers le site original.</li>
+            </ol>
+            <h2 class="subtitle">Création d'URL raccourcie:</h2>
+            <div class="exemple">
+                POST [project_url]/api/shorturl/new - https://google.fr
+            </div>
+            <form action="/api/shorturl/new" method="POST">
+                <label for="url">URL à raccourcir:</label>
+                <input type="text" id="url" name="url" placeholder="https://www.freecodecamp.com">
+                <input type="submit" value="ENVOYER">
+            </form>
+            <h2 class="subtitle">Par exemple:</h2>
+            <a  href="http://localhost:3001/api/shorturl/6ynVpYOcQ">[project_url]/api/shorturl/6ynVpYOcQ</a>
+            <h2 class="subtitle">Redidrigera l'utilisateur vers:</h2>
+            <a href="https://logikdev.fr">https://logikdev.fr</a>
+        </div>
+    </div>
+</body>
+</html>
